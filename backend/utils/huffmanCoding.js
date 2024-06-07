@@ -26,8 +26,6 @@ function compress(data) {
   }
   header += endOfHeaderMarker;
 
-  fs.writeFileSync('header.txt', header, 'utf-8');
-
   let body = data
     .split('')
     .map((char) => codes[char])
